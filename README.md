@@ -1,6 +1,8 @@
+![A screenshot of the script in action](https://i.imgur.com/YFkP8qW.png)
+
 ## page
 
-you need to select `tbody` to access all posts.
+you need to select `.itemlist` `tbody` to access all posts.
 
 ## posts
 
@@ -17,3 +19,7 @@ top line class `tr.athing`
 Main: `https://archive.ph/`
 Alternative 1: `https://12ft.io/`
 Alternative 2: `archive.org`
+
+## paywall list
+
+https://raw.githubusercontent.com/iamadamdev/bypass-paywalls-chrome/780c7854a0249ce366262348e0967459b3a1d6d2/src/js/sites.js
