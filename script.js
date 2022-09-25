@@ -174,13 +174,14 @@ const paywalls = [
   "zeit.de",
 ];
 
-let table = document.querySelector("table.itemlist");
-let titles = table.querySelectorAll("tr.athing");
+let titles = document.querySelectorAll("table.itemlist tr.athing");
+let postTitle = document.querySelector("tbody table.fatitem tr.athing");
 
-titles.forEach((title) => {
-  let meta = title.nextSibling.querySelector(".subtext");
-  let link = title.querySelector(".titlelink").href;
-  let domain = title.querySelector("span.sitestr") ? title.querySelector("span.sitestr").innerText : "";
+// The main function that updates the UI with the links.
+const passTheButter = (node) => {
+  let meta = node.nextSibling.querySelector(".subtext");
+  let link = node.querySelector(".titlelink").href;
+  let domain = node.querySelector("span.sitestr") ? node.querySelector("span.sitestr").innerText : "";
   let paywall = paywalls.find((paywall) => domain.includes(paywall));
 
   if (paywall) {
@@ -196,4 +197,11 @@ titles.forEach((title) => {
 
     meta.appendChild(paywallSpan);
   }
-});
+};
+
+titles &&
+  titles.forEach((title) => {
+    passTheButter(title);
+  });
+
+postTitle && passTheButter(postTitle);
