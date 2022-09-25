@@ -192,7 +192,7 @@ const passTheButter = (node) => {
     | <a href="https://archive.is/${link}" target="_blank">Archive.is</a> 
     | <a href="https://12ft.io/${link}" target="_blank">12ft.io</a> 
     | <a href="https://web.archive.org/web/${link}" target="_blank">Archive.org</a> 
-    | <a href="https://github.com/mostlyemre/" target="_blank">ℹ</a> 
+    | <a href="https://github.com/MostlyEmre/hn-anti-paywall" target="_blank">ℹ</a> 
     `;
 
     meta.appendChild(paywallSpan);
