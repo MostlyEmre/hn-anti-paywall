@@ -32,8 +32,8 @@ Alternative 2: `archive.org`
 
 ## Paywall List
 
-The paywall list (`paywalls.json`) is taken from the following URL. At first, I was mindfully fetching the list, but then I just manually inserted the list, way simpler this way.
+The paywall list (`paywalls.json`) is decoupled from the following URL. At first, I was mindfully fetching the list, but then I just manually inserted the list, way simpler this way.
 
-https://raw.githubusercontent.com/iamadamdev/bypass-paywalls-chrome/780c7854a0249ce366262348e0967459b3a1d6d2/src/js/sites.js
+[iamadamdev/bypass-paywalls-chrome](https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/src/js/sites.js)
 
 **If you wish to update the paywall list (`paywalls.json`), feel free to edit and send a pull request.**
