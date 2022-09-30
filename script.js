@@ -6,7 +6,7 @@ let postTitle = document.querySelector("tbody table.fatitem tr.athing");
 // The main function that updates the UI with the links.
 const passTheButter = (node) => {
   let meta = node.nextSibling.querySelector(".subtext");
-  let link = node.querySelector(".titleline").href;
+  let link = node.querySelector(".titleline a").href;
   let domain = node.querySelector("span.sitestr") ? node.querySelector("span.sitestr").innerText : "";
   let paywall = paywalls.find((paywall) => domain.includes(paywall));
 
