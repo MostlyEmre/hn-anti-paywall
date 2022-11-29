@@ -1,6 +1,5 @@
 const paywalls = []; // Add paywall domains from paywalls.json here
-
-let titles = document.querySelectorAll("table.itemlist tr.athing");
+let titles = document.querySelectorAll("table tr.athing");
 let postTitle = document.querySelector("tbody table.fatitem tr.athing");
 
 // The main function that updates the UI with the links.
