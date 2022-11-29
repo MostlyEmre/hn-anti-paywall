@@ -1,6 +1,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+Note! If you want to build the script without using GreasyFork or something. Add the array of paywall urls inside `paywalls.json` into the paywalls const in `script.js`. The code won't work otherwise.
+
 **GreasyFork**: https://greasyfork.org/en/scripts/452024-hacker-news-anti-paywall
+**Detailed write-up**: https://gist.github.com/MostlyEmre/ddec18c4a5b18413994ff9e179bf00ac
+**Show HN**: https://news.ycombinator.com/item?id=33794672
 
 - [Usage](#usage)
 - [Screenshots](#screenshots)
