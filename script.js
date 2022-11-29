@@ -24,9 +24,8 @@ const passTheButter = (node) => {
   }
 };
 
-titles &&
-  titles.forEach((title) => {
-    passTheButter(title);
-  });
-
-postTitle && passTheButter(postTitle);
+postTitle
+  ? passTheButter(postTitle)
+  : titles.forEach((title) => {
+      passTheButter(title);
+    });
