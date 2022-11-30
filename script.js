@@ -1,3 +1,18 @@
+const projects = [
+  {
+    name: "Archive.is",
+    url: "https://archive.is/",
+  },
+  {
+    name: "12ft.io",
+    url: "https://12ft.io/",
+  },
+  {
+    name: "Archive.org",
+    url: "https://web.archive.org/web/",
+  },
+];
+
 const paywalls = []; // Add paywall domains from paywalls.json here
 let titles = document.querySelectorAll("table tr.athing");
 let postTitle = document.querySelector("tbody table.fatitem tr.athing");
@@ -11,14 +26,28 @@ const passTheButter = (node) => {
 
   if (paywall) {
     let paywallSpan = document.createElement("span");
-    // Add archive.is / 12ft.io / archive.org links
-    paywallSpan.innerHTML += `
-    | 💰 
-    | <a href="https://archive.is/${link}" target="_blank">Archive.is</a> 
-    | <a href="https://12ft.io/${link}" target="_blank">12ft.io</a> 
-    | <a href="https://web.archive.org/web/${link}" target="_blank">Archive.org</a> 
-    | <a href="https://github.com/MostlyEmre/hn-anti-paywall" target="_blank">ℹ</a> 
-    `;
+    paywallSpan.appendChild(document.createTextNode(" | 💰"));
+
+    projects.forEach((project) => {
+      const anchor = document.createElement("a");
+      const line = document.createElement("span");
+      line.textContent = " | ";
+      anchor.setAttribute("href", `${project.url}${link}`);
+      anchor.setAttribute("target", "_blank");
+      anchor.setAttribute("rel", "noopener noreferrer");
+      anchor.textContent = project.name;
+      paywallSpan.appendChild(line);
+      paywallSpan.appendChild(anchor);
+    });
+    paywallSpan.appendChild(document.createTextNode(" | "));
+    paywallSpan.appendChild(
+      Object.assign(document.createElement("a"), {
+        href: `https://github.com/MostlyEmre/hn-anti-paywall`,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        textContent: "ℹ",
+      })
+    );
 
     meta.appendChild(paywallSpan);
   }
